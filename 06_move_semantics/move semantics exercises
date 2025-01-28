@@ -1,1 +1,88 @@
+//exercise 1 (move_semantics 1)
 
+// TODO: Fix the compiler error in this function.
+/* 
+fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
+    let mut vec = vec;
+    //added the mut above
+    vec.push(88);
+    vec
+}
+
+fn main() {
+    // You can optionally experiment here.
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn move_semantics1() {
+        let vec0 = vec![22, 44, 66];
+        let vec1 = fill_vec(vec0);
+        //note that 'vec0' cant be accessed anymore cause its moved to 'fill_vec'
+        assert_eq!(vec1, vec![22, 44, 66, 88]);
+    }
+}*/
+
+
+//exercise 2 (move_semantics 2)
+/* 
+fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
+    let mut vec = vec;
+
+    vec.push(88);
+
+    vec
+}
+
+fn main() {
+    // You can optionally experiment here.
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    // TODO: Make both vectors `vec0` and `vec1` accessible at the same time to
+    // fix the compiler error in the test.
+    #[test]
+    fn move_semantics2() {
+        let vec0 = vec![22, 44, 66];
+
+        let vec1 = fill_vec(vec0.clone()); 
+        // cloning `vec0` above so that the clone is moved into `fill_vec`, not `vec0` itself.
+
+        assert_eq!(vec0, [22, 44, 66]);
+        assert_eq!(vec1, [22, 44, 66, 88]);
+    }
+}*/
+
+
+//exercise 3 (move_semantics 3)
+
+// TODO: Fix the compiler error in the function without adding any new line.
+/* 
+//added the 'mut' below, next to the 'vec'
+fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
+    vec.push(88);
+
+    vec
+}
+
+fn main() {
+    // You can optionally experiment here.
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn move_semantics3() {
+        let vec0 = vec![22, 44, 66];
+        let vec1 = fill_vec(vec0);
+        assert_eq!(vec1, [22, 44, 66, 88]);
+    }
+}*/
