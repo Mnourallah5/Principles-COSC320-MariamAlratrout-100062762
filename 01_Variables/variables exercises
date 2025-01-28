@@ -1,1 +1,85 @@
 
+//exercise 1 (variable 1)
+/*
+fn main() {
+    // TODO: Add the missing keyword.
+    //I added `let` 
+   let x = 5;
+
+    println!("x has the value {x}");
+}*/
+
+
+//exercise 2 (variable 1)
+/*
+fn main() {
+    // TODO: Change the line below to fix the compiler error.
+
+    // The easiest way to fix the compiler error is to initialize the variable `x`. 
+    //By setting its value to an integer, Rust infers its typeas `i32` which is 
+    //the default type for integers. But we can also enforce a type different 
+    //from the default `i32` by adding a type annotation: let x: u8 = 55;
+
+    let x = 55;
+
+    if x == 10 {
+        println!("x is ten!");
+    } else {
+        println!("x is not ten!");
+    }
+}*/
+
+
+//exercise 3 (variable 1)
+/*
+#![allow(clippy::needless_late_init)]
+fn main() {
+    // TODO: Change the line below to fix the compiler error.
+
+    // Reading uninitialized variables isn't allowed in Rust so, i need to assign a value first.
+    let x: i32 = 55;
+
+    println!("Number {x}");
+
+    // It's also possible to declare a variable and initialize it later. But it can't be used before initialization.
+    let y: i32;
+    y = 56;
+    println!("Number {y}");
+}*/
+
+
+//exercise 4 (variable 1)
+// TODO: Fix the compiler error.
+/*
+fn main() {
+    // In Rust, variables are immutable by default.
+    //Adding the `mut` keyword after `let` makes the declared variable mutable.
+    let mut x = 3;
+    println!("Number {x}");
+
+    x = 5; // Don't change this line
+    println!("Number {x}");
+}*/
+
+//exercise 5 (variable 1)
+/*
+fn main() {
+    let number = "T-H-R-E-E"; // Don't change this line
+    println!("Spell a number: {}", number);
+
+    // TODO: Fix the compiler error by changing the line below without renaming the variable.
+    // Using variable shadowing to fix it
+    let number = 3;
+    println!("Number plus two is: {}", number + 2);
+}*/
+
+
+//exercise 6 (variable 1)
+// TODO: Change the line below to fix the compiler error.
+/*
+//line below edited so that the type of constants is always annotated.
+const NUMBER: u64 = 3;
+
+fn main() {
+    println!("Number: {NUMBER}");
+}*/
